@@ -44,4 +44,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
       updateToDoListOnScreen();
     }
   });
+
+  const aufraeumenToDoList = document.getElementById("aufraeumen");
+  aufraeumenToDoList.addEventListener("click", (event) => {
+    todos = todos.filter(t => !t.erledigt)
+    updateToDoListOnScreen();
+  });
 });
